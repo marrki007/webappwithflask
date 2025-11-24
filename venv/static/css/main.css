@@ -1,0 +1,183 @@
+/* main.css — simple, clean styling for your Flask app */
+
+/* Base/reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", "Lato", "Raleway", system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial;
+  color: #222;
+}
+
+html, body {
+  height: 100%;
+  background: #f6f8fb;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header / nav */
+header {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 1px 0 rgba(16,24,40,0.02);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.menu-container {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 12px 20px;
+  justify-content: space-between;
+}
+
+.brand-name {
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  color: #111827;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+/* Nav list */
+.nav-lists {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #334155;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.nav-link:hover {
+  background: rgba(99,102,241,0.08);
+  color: #111827;
+}
+
+.nav-link.active {
+  background: #6366f1; /* indigo-500 */
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(99,102,241,0.12);
+}
+
+/* Main page container */
+main {
+  max-width: 980px;
+  margin: 28px auto;
+  padding: 0 20px;
+}
+
+/* Content card */
+.container {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 26px;
+  box-shadow: 0 6px 20px rgba(16,24,40,0.06);
+}
+
+/* Headings & paragraphs */
+h1, h2 {
+  color: #0f172a;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+p {
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* Tech list */
+.tech-lists {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.tech {
+  background: #eef2ff;
+  color: #4338ca;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* Form styles */
+form textarea,
+form input[type="text"] {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(15,23,42,0.08);
+  font-size: 0.95rem;
+  background: #fbfdff;
+  margin-bottom: 12px;
+  resize: vertical;
+}
+
+form button,
+button {
+  background: #10b981; /* green-500 */
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(16,185,129,0.12);
+}
+
+form button:hover,
+button:hover {
+  transform: translateY(-1px);
+}
+
+/* Result box */
+.result {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #fbfefb;
+  border: 1px solid rgba(16,185,129,0.06);
+}
+
+/* Footer (if you want) */
+footer {
+  text-align: center;
+  color: #64748b;
+  font-size: 0.9rem;
+  margin: 40px 0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 720px) {
+  .menu-container {
+    padding: 12px;
+  }
+  .nav-lists {
+    gap: 8px;
+  }
+  main {
+    margin: 18px auto;
+  }
+  .container {
+    padding: 18px;
+  }
+}

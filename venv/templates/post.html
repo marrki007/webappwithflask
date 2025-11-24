@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  <h1>{{ title }}</h1>
+
+  <form method="POST" action="{{ url_for('post') }}">
+    <textarea name="text" rows="6" cols="60" placeholder="Enter your text here...">{{ text or '' }}</textarea><br>
+    <button type="submit">Analyze</button>
+  </form>
+
+  {% if text %}
+    <h2>Results:</h2>
+    <p><strong>Text:</strong> {{ text }}</p>
+    <p><strong>Word count:</strong> {{ word_count }}</p>
+    <p><strong>Character count:</strong> {{ char_count }}</p>
+  {% endif %}
+{% endblock %}
